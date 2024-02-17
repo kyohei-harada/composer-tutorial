@@ -1,0 +1,24 @@
+{
+    "name": "kyohei-harada/composer-tutorial",
+    "autoload": {
+        "psr-4": {
+            "KyoheiHarada\\ComposerTutorial\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kyohei.harada",
+            "email": "kyohei.harada@e-grant.net"
+        }
+    ],
+    "require": {},
+    "type": "library",
+    "description": "For Study Composer.",
+    "license": ["proprietary"],
+    "scripts": {
+        "echo": "echo"
+    },
+    "scripts-descriptions": {
+        "echo": "Echo custom string."
+    }
+}
