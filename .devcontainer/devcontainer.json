@@ -21,7 +21,19 @@
 	"runArgs": [
 		"--name",
 		"${localWorkspaceFolderBasename}"
-	]
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"xdebug.php-debug",
+				"bmewburn.vscode-intelephense-client",
+				"junstyle.php-cs-fixer",
+				"neilbrayfield.php-docblocker",
+				"yzhang.markdown-all-in-one",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	}
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
