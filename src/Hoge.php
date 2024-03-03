@@ -19,37 +19,47 @@ class Hoge
     {
         $this->private_property = $private_property;
         $this->public_property = $public_property;
-        print(__FUNCTION__ . PHP_EOL);
     }
 
     /**
-     * Undocumented function
+     * Return "static" string
      *
-     * @return void
+     * @return string
      */
-    public static function StaticFunc(): void
+    public static function StaticFunc(): string
     {
-        print(__FUNCTION__ . PHP_EOL);
+        return "static";
     }
 
     /**
-     * Undocumented function
+     * You can say hello back
      *
-     * @return void
+     * @return string
      */
-    private function PrivateFunc(): void
+    public function Greeting(string $name): string
     {
-        print(__FUNCTION__ . ": " . $this->private_property . PHP_EOL);
+        return "Hello, " . $name . ".";
     }
 
     /**
-     * Undocumented function
+     * Return sum of two numbers
      *
-     * @return void
+     * @param integer $n1
+     * @param integer $n2
+     * @return integer
      */
-    public function PublicFunc(): void
+    public function Sum(int $n1, int $n2): int
     {
-        print(__FUNCTION__ . ": " . $this->public_property . PHP_EOL);
-        $this->PrivateFunc();
+        return ($n1 + $n2);
+    }
+
+    /**
+     * Return Private Property
+     *
+     * @return string
+     */
+    public function GetPrivateProperty(): string
+    {
+        return $this->private_property;
     }
 }
