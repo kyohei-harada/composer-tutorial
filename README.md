@@ -14,8 +14,8 @@
   - [x] php-cs-fixer
 - [x] 静的解析ツールを試す
   - [x] phpstan
-- [ ] テストコードを記述する
-  - [ ] PHPUnit の使い方を学び試す
+- [x] テストコードを記述する
+  - [x] PHPUnit の使い方を学び試す
 - [ ] CI を実装する
   - [ ] php-cs-fixer
   - [ ] phpstan

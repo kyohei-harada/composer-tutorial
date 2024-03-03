@@ -8,7 +8,13 @@ use KyoheiHarada\ComposerTutorial\Hoge;
 
 $hoge = new Hoge();
 
-print($hoge->public_property);
+print($hoge->public_property . PHP_EOL);
 
-$hoge->StaticFunc();
-$hoge->PublicFunc();
+print($hoge->StaticFunc() . PHP_EOL);
+
+$name = "kyohei";
+print($hoge->Greeting($name) . PHP_EOL);
+
+print($hoge->Sum(1,2) . PHP_EOL);
+
+print($hoge->GetPrivateProperty() . PHP_EOL);

@@ -30,9 +30,13 @@
 				"junstyle.php-cs-fixer",
 				"neilbrayfield.php-docblocker",
 				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"DotJoshJohnson.xml"
 			]
 		}
+	},
+	"remoteEnv": {
+		"XDEBUG_MODE": "debug,coverage"
 	}
 
 	// Use 'postCreateCommand' to run commands after the container is created.
