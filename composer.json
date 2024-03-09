@@ -15,14 +15,23 @@
     "description": "For Study Composer.",
     "license": ["proprietary"],
     "scripts": {
-        "echo": "echo"
+        "echo": "KyoheiHarada\\ComposerTutorial\\Script::Echo",
+        "dump-extras": "KyoheiHarada\\ComposerTutorial\\Script::DumpExtras"
     },
     "scripts-descriptions": {
-        "echo": "Echo custom string."
+        "echo": "Echo string.",
+        "dump-extras": "Echo Extra Variables."
+    },
+    "extra": {
+        "extra1": "value1",
+        "extra2": "value2"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.49",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.5"
+    },
+    "require": {
+        "composer/composer": "~2.6.6"
     }
 }
