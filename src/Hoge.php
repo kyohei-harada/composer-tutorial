@@ -10,8 +10,6 @@ class Hoge
     public string $public_property;
 
     /**
-     * Undocumented function
-     *
      * @param string $private_property
      * @param string $public_property
      */
