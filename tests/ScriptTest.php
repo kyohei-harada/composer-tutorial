@@ -20,7 +20,12 @@ final class ScriptTest extends TestCase
     public function setUp(): void
     {
         $COMPOSER_JSON_PATH = __DIR__ . '/../composer.json';
-        $extra = json_decode(file_get_contents($COMPOSER_JSON_PATH), true)['extra'];
+        $COMPOSER_JSON_CONTENT = file_get_contents($COMPOSER_JSON_PATH);
+        if ($COMPOSER_JSON_CONTENT) {
+            $extra = json_decode($COMPOSER_JSON_CONTENT, true)['extra'];
+        } else {
+            throw new Exception("Can't read composer.json file.");
+        }
 
         $this->root_package_interface = $this->createStub(RootPackageInterface::class);
         $this->root_package_interface->method('getExtra')->willReturn($extra);
