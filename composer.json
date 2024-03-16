@@ -16,7 +16,14 @@
     "license": ["proprietary"],
     "scripts": {
         "echo": "KyoheiHarada\\ComposerTutorial\\Script::Echo",
-        "dump-extras": "KyoheiHarada\\ComposerTutorial\\Script::DumpExtras"
+        "dump-extras": "KyoheiHarada\\ComposerTutorial\\Script::DumpExtras",
+        "console": "KyoheiHarada\\ComposerTutorial\\ConsoleCommand",
+        "test": [
+            "composer validate",
+            "php-cs-fixer check",
+            "phpunit --coverage-text",
+            "phpstan analyse -l 8 ./src/ ./tests/ ./examples/"
+        ]
     },
     "scripts-descriptions": {
         "echo": "Echo string.",
@@ -29,9 +36,11 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.49",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^10.5",
+        "symfony/framework-bundle": "^7.0"
     },
     "require": {
-        "composer/composer": "~2.6.6"
+        "composer/composer": "^2.7",
+        "symfony/console": "^6.4"
     }
 }
