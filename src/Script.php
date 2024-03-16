@@ -23,7 +23,7 @@ class Script
      */
     public static function DumpExtras(Event $event): void
     {
-        foreach ($event->getComposer()->getPackage()->getExtra() as $k=>$v) {
+        foreach ($event->getComposer()->getPackage()->getExtra() as $k => $v) {
             print("{$k}: {$v}" . PHP_EOL);
         }
     }
