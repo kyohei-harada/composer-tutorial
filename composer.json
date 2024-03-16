@@ -13,8 +13,13 @@
     ],
     "type": "library",
     "description": "For Study Composer.",
-    "license": ["proprietary"],
+    "license": [
+        "proprietary"
+    ],
     "scripts": {
+        "post-install-cmd": [
+            "if [ ! -f .git/hooks/pre-commit ]; then cp -p ./pre-commit .git/hooks/; else echo 'Notice: .git/hooks/pre-commit already exists.'; fi"
+        ],
         "echo": "KyoheiHarada\\ComposerTutorial\\Script::Echo",
         "dump-extras": "KyoheiHarada\\ComposerTutorial\\Script::DumpExtras",
         "console": "KyoheiHarada\\ComposerTutorial\\ConsoleCommand",
